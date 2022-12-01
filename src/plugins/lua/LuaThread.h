@@ -27,6 +27,7 @@ namespace mq::lua {
 
 class LuaEventProcessor;
 class LuaImGuiProcessor;
+class LuaActors;
 class LuaThread;
 struct LuaCoroutine;
 
@@ -177,6 +178,7 @@ private:
 	std::shared_ptr<LuaCoroutine> m_coroutine;
 	sol::environment m_environment;
 	std::optional<sol::table> m_mqTable;
+	std::optional<sol::table> m_actorTable;
 	sol::table m_threadTable;
 	uint32_t m_threadIndex = 0;
 
